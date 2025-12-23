@@ -1,0 +1,475 @@
+/* ===== BASIC ===== */
+/* ===== SECTION IMAGE BETWEEN TITLE & TEXT ===== */
+
+.section-title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.section-image {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.section-image img {
+    width: 100%;
+    max-width: 800px;   /* KUNCI UKURAN */
+    height: auto;
+    border-radius: 12px;
+}
+
+.section-text {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.9;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .section-image img {
+        max-width: 100%;
+    }
+}
+
+/* ===== IMAGE BESAR KHUSUS ===== */
+.section-full {
+    overflow: visible; /* KUNCI */
+}
+
+.section-image {
+    display: block;
+    width: 100vw;
+    height: auto;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+
+/* ===== LOGO IMAGE ===== */
+.logo {
+    margin: 0;
+}
+
+.logo img {
+    height: 40px;          /* KUNCI UKURAN */
+    width: auto;
+    display: block;
+}
+
+/* ===== HERO IMAGE ===== */
+.hero-bg {
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+}
+
+
+.hero-bg .container {
+    background-image: url("../images/hero.jpg");
+    position: relative;
+    z-index: 1;
+}
+
+.nav.open {
+    display: flex;
+}
+
+/* ===== MENU BASE ===== */
+.nav {
+    display: flex;
+    gap: 20px;
+}
+/* ===== CARD IMAGE ===== */
+
+
+/* ===== HAMBURGER BUTTON ===== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+/* ===== ABOUT IMAGE ===== */
+.about-wrap {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-wrap img {
+    width: 45%;
+    border-radius: 8px;
+}
+
+.about-wrap p {
+    width: 55%;
+    line-height: 1.8;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .about-wrap {
+        flex-direction: column;
+    }
+
+    .about-wrap img,
+    .about-wrap p {
+        width: 100%;
+    }
+}
+
+
+/* ===== RESPONSIVE MENU ===== */
+@media (max-width: 900px) {
+
+    .nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        display: none;
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav a {
+        padding: 10px 20px;
+        border-top: 1px solid #eee;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* ===== RESET GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;        /* KUNCI ukuran font */
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-y: visible;
+    overflow-x: visible;    /* CEGAH zoom/geser saat pindah halaman */
+}
+
+
+body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Arial, sans-serif;
+    color: #333;
+    line-height: 1.8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===== HEADER ===== */
+/* ===== HEADER FIXED SIZE ===== */
+/* ===== HEADER LOCK ===== */
+.header {
+    position: fixed;          /* KUNCI TOTAL */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 9999;
+}
+.hero {
+    margin-top: 0;       /* PENTING */
+    padding-top: 80px;   /* BERI RUANG VISUAL */
+}
+
+/* ===== HEADER CONTENT ===== */
+.header .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===== PAGE OFFSET (ANTI LOMPAT) ===== */
+.page {
+    padding-top: 70px;   /* SAMA dengan tinggi header */
+}
+
+
+.nav a {
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;   /* CEGAH menu turun baris */
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.nav a {
+    margin-left: 20px;
+    color: #333;
+    font-size: 14px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    
+    background: linear-gradient(to right, #660050, #6c8192);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: white;
+    color: #003366;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+/* ===== SECTION ===== */
+.section {
+    padding: 60px 0;
+}
+
+.gray {
+    background: #f7f7f7;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ===== CARD ===== */
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+/* ===== CARD IMAGE SETTING ===== */
+.card {
+    text-align: center;
+}
+
+.card img {
+    width: 250px;          /* KUNCI UKURAN */
+    height: 250px;         /* KUNCI TINGGI */
+    object-fit: contain; /* GAMBAR TIDAK PECah */
+    margin: 15px auto;
+    display: block;
+}
+
+
+.card h4 {
+    margin-top: 0;
+}
+
+/* ===== FLOW ===== */
+
+.flow {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.flow li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #003366;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+/* ===== TABLE ===== */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+.info-table th {
+    width: 30%;
+    background: #f0f0f0;
+    text-align: left;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    width: 100%;
+}
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    .nav a {
+        margin-left: 0;
+        margin-right: 15px;
+        font-size: 14px;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    /* Header */
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    /* Section */
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    /* Card */
+    .card-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /* Flow */
+    .flow-item {
+        padding-left: 20px;
+    }
+
+    .flow-number {
+        left: 10px;
+        top: -15px;
+    }
+
+    /* Table */
+    .info-table th,
+    .info-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Form */
+    .contact-form {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 30px
